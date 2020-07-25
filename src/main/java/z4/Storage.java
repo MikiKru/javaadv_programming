@@ -22,6 +22,14 @@ public class Storage {
     private void printValues(String key){
         products.get(key).forEach(System.out::println);
     }
+    private List<String> findValues(String value){
+        List<String> keys = new ArrayList<>();
+        products.forEach((k, v) -> {
+            if (v.contains(value))
+                keys.add(k);
+        });
+        return keys;
+    }
     public static void main(String[] args) {
         Storage storage = new Storage(new HashMap<>());
         storage.addToStorage("1","P1");
@@ -29,6 +37,9 @@ public class Storage {
         storage.addToStorage("1","P3");
         storage.addToStorage("3","P4");
         storage.addToStorage("1","P5");
+        storage.addToStorage("5","P1");
         storage.printValues("1");
+        System.out.println(storage.findValues("P1"));
+        System.out.println(storage.findValues("P10"));
     }
 }
