@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78ecb8fd-7028-4a82-a9d6-aaf66013547c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/z5/SDAHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/z6/TreeMapProcessing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,24 +16,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/z5/SDAHashSet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/z6/TreeMapProcessing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state relative-caret-position="208">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#157#158#0" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/HashSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="219" column="8" lean-forward="true" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -66,6 +55,7 @@
         <option value="$PROJECT_DIR$/src/main/java/z3/StringFormating.java" />
         <option value="$PROJECT_DIR$/src/main/java/z4/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/z5/SDAHashSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/z6/TreeMapProcessing.java" />
       </list>
     </option>
   </component>
@@ -135,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595671551308" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595672687335" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -152,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SDAHashSet">
+  <component name="RunManager" selected="Application.TreeMapProcessing">
     <configuration name="MapsProcessing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="z3.MapsProcessing" />
       <module name="jadv_programming" />
@@ -205,12 +195,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringSorting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="z1_z2.StringSorting" />
+    <configuration name="TreeMapProcessing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="z6.TreeMapProcessing" />
       <module name="jadv_programming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="z1_z2.*" />
+          <option name="PATTERN" value="z6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -220,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TreeMapProcessing" />
         <item itemvalue="Application.SDAHashSet" />
         <item itemvalue="Application.Storage" />
         <item itemvalue="Application.StringFormating" />
         <item itemvalue="Application.MapsProcessing" />
-        <item itemvalue="Application.StringSorting" />
       </list>
     </recent_temporary>
   </component>
@@ -238,12 +228,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595661549900</updated>
-      <workItem from="1595661562067" duration="9810000" />
+      <workItem from="1595661562067" duration="10904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9810000" />
+    <option name="totallyTimeSpent" value="10904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -264,7 +254,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26487252" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24362606" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -343,12 +333,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/z5/SDAHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="427">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#157#158#0" expanded="true" />
             <element signature="e#209#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/z6/TreeMapProcessing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
