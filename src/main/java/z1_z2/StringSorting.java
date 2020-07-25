@@ -1,4 +1,4 @@
-package z1;
+package z1_z2;
 
 import java.util.*;
 import java.util.stream.Collectors;
