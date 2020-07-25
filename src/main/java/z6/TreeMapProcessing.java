@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class TreeMapProcessing {
     private void getEntrySet(Map<Integer, String> strs){
-        List<Map.Entry> entries = new ArrayList<>(strs.entrySet());
+        List<Map.Entry<Integer, String>> entries = new ArrayList<>(strs.entrySet());
         System.out.println(entries.get(0));
         System.out.println(entries.get(entries.size() - 1));
     }
@@ -19,4 +19,4 @@ public class TreeMapProcessing {
         System.out.println(strs);
         new TreeMapProcessing().getEntrySet(strs);
     }
-}   
+}
