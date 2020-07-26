@@ -1,4 +1,4 @@
-package z9_z10;
+package z9_z10_z11;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import static java.lang.Math.*;
 
 @Data
 @AllArgsConstructor
-public class Circle {
+public class Circle implements Movable {
     private Point2D center;
     private Point2D point;
 
@@ -33,6 +33,11 @@ public class Circle {
         slicesPoints.add(new Point2D( - point.getX(), - point.getY()));
         return slicesPoints;
     }
+    @Override
+    public void move(MoveDirection moveDirection) {
+        center.move(moveDirection);
+        point.move(moveDirection);
+    }
 
     public static void main(String[] args) {
         Circle circle = new Circle(new Point2D(1,1), new Point2D(2,2));
@@ -40,5 +45,12 @@ public class Circle {
         System.out.printf("Obwód okręgu: %.2f cm\n", circle.getPerimeter());
         System.out.printf("Pole okręgu: %.2f cm^2\n", circle.getArea());
         System.out.println("Punkty na okręgu: " + circle.getSlicePoints());
+
+        circle.move(new MoveDirection(1,1));
+        System.out.printf("Center: [%.2f,%.2f] Point: [%.2f,%.2f]\n",
+                circle.center.getX(), circle.center.getY(), circle.point.getX(), circle.point.getY());
+        System.out.printf("Promień okręgu: %.2f cm\n", circle.getRadius());
+        System.out.printf("Obwód okręgu: %.2f cm\n", circle.getPerimeter());
+        System.out.printf("Pole okręgu: %.2f cm^2\n", circle.getArea());
     }
 }
