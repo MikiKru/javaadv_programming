@@ -3,10 +3,7 @@ package z12_z13;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CarService {
@@ -70,6 +67,32 @@ public class CarService {
     }
     public Car getCheapestCar(){
         return cars.stream().sorted(Comparator.comparing(Car::getPrice)).collect(Collectors.toList()).get(0);
+    }
+    public List<Car> getCarsWithAtLeast3Manufacturers(){
+        return cars.stream().filter(car -> car.getManuracturers().size() >= 3).collect(Collectors.toList());
+    }
+    public List<Car> getCarsOrderBy(boolean asc){
+        if(asc){
+            return cars.stream().sorted(Comparator.comparing(Car::getPrice)).collect(Collectors.toList());
+        }
+        return cars.stream().sorted(Comparator.comparing(Car::getPrice).reversed()).collect(Collectors.toList());
+    }
+    public Optional<Car> findCarByBrandAndModel(String brand, String model){
+        return cars.stream()
+                .filter(car -> car.getBrand().equals(brand) && car.getModel().equals(model))
+                .findFirst();
+    }
+    public List<Car> getCarsProducedByManufacturerName(String name){
+        return cars.stream()
+                .filter(car -> car.getManuracturers()
+                        .stream().anyMatch(manufacturer -> manufacturer.getName().equals(name)))
+                .collect(Collectors.toList());
+    }
+    public List<Car> getCarsProducedByManufacturerYear(int year){
+        return cars.stream()
+                .filter(car -> car.getManuracturers()
+                        .stream().anyMatch(manufacturer -> manufacturer.getYear() == year))
+                .collect(Collectors.toList());
     }
     public static void main(String[] args) {
         CarService carService = new CarService();
