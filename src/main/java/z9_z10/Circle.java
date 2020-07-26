@@ -1,4 +1,4 @@
-package z9;
+package z9_z10;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -35,7 +35,7 @@ public class Circle {
     }
 
     public static void main(String[] args) {
-        Circle circle = new Circle(new Point2D(1,1), new Point2D(-12,2));
+        Circle circle = new Circle(new Point2D(1,1), new Point2D(2,2));
         System.out.printf("Promień okręgu: %.2f cm\n", circle.getRadius());
         System.out.printf("Obwód okręgu: %.2f cm\n", circle.getPerimeter());
         System.out.printf("Pole okręgu: %.2f cm^2\n", circle.getArea());
