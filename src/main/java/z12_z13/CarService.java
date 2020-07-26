@@ -33,7 +33,7 @@ public class CarService {
                     EngineType.V6)
     ));
     // metody
-    public void getAllCars(){
+    public void getAllCars(List<Car> cars){
         final int[] id = {1};
         cars.forEach(car -> System.out.printf("Id: %-2d Marka: %-15s Model: %-10s Cena: %10.2f zł Rok: %-4d Producenci: %-80s " +
                         "Engine: %-5s\n",
@@ -57,6 +57,9 @@ public class CarService {
     public void addCar(Car car){
         cars.add(car);
     }
+    public List<Car> getCarsWithV12Engine(){
+        return cars.stream().filter(car -> car.getEngineType() == EngineType.V12).collect(Collectors.toList());
+    }
     public static void main(String[] args) {
         CarService carService = new CarService();
         carService.removeCarByIndex(0);
@@ -64,7 +67,9 @@ public class CarService {
         carService.addCar(new Car("Toyota", "RAV4", 200_000, 2020,
                 new ArrayList<>( Arrays.asList(new Manufacturer("Toyota", 2020, "JAP"))),
                 EngineType.V8));
-        carService.getAllCars();
+        carService.getAllCars(carService.cars);
+        System.out.println("AUTA Z SILNIKIEM V12");
+        carService.getAllCars(carService.getCarsWithV12Engine());
     }
 
 
