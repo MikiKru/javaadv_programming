@@ -10,7 +10,7 @@ import static java.lang.Math.*;
 
 @Data
 @AllArgsConstructor
-public class Circle implements Movable {
+public class Circle implements Movable, Resizable {
     private Point2D center;
     private Point2D point;
 
@@ -38,7 +38,11 @@ public class Circle implements Movable {
         center.move(moveDirection);
         point.move(moveDirection);
     }
-
+    @Override
+    public void resize(double resizeFactor) {
+        point.setX(point.getX() * resizeFactor); // x = x * resizeFactor
+        point.setY(point.getY() * resizeFactor);
+    }
     public static void main(String[] args) {
         Circle circle = new Circle(new Point2D(1,1), new Point2D(2,2));
         System.out.printf("Promień okręgu: %.2f cm\n", circle.getRadius());
@@ -47,6 +51,13 @@ public class Circle implements Movable {
         System.out.println("Punkty na okręgu: " + circle.getSlicePoints());
 
         circle.move(new MoveDirection(1,1));
+        System.out.printf("Center: [%.2f,%.2f] Point: [%.2f,%.2f]\n",
+                circle.center.getX(), circle.center.getY(), circle.point.getX(), circle.point.getY());
+        System.out.printf("Promień okręgu: %.2f cm\n", circle.getRadius());
+        System.out.printf("Obwód okręgu: %.2f cm\n", circle.getPerimeter());
+        System.out.printf("Pole okręgu: %.2f cm^2\n", circle.getArea());
+
+        circle.resize(0.5);
         System.out.printf("Center: [%.2f,%.2f] Point: [%.2f,%.2f]\n",
                 circle.center.getX(), circle.center.getY(), circle.point.getX(), circle.point.getY());
         System.out.printf("Promień okręgu: %.2f cm\n", circle.getRadius());
