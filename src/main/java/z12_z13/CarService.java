@@ -1,9 +1,11 @@
 package z12_z13;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -60,6 +62,15 @@ public class CarService {
     public List<Car> getCarsWithV12Engine(){
         return cars.stream().filter(car -> car.getEngineType() == EngineType.V12).collect(Collectors.toList());
     }
+    public List<Car> getCarsProducedBefore1999(){
+        return cars.stream().filter(car -> car.getYear() < 1999).collect(Collectors.toList());
+    }
+    public Car getMostExpensiveCar(){   // domyślnie od min - max
+        return cars.stream().sorted(Comparator.comparing(Car::getPrice).reversed()).collect(Collectors.toList()).get(0);
+    }
+    public Car getCheapestCar(){
+        return cars.stream().sorted(Comparator.comparing(Car::getPrice)).collect(Collectors.toList()).get(0);
+    }
     public static void main(String[] args) {
         CarService carService = new CarService();
         carService.removeCarByIndex(0);
@@ -70,6 +81,11 @@ public class CarService {
         carService.getAllCars(carService.cars);
         System.out.println("AUTA Z SILNIKIEM V12");
         carService.getAllCars(carService.getCarsWithV12Engine());
+        System.out.println("AUTA WYPRODUKOWANE PRZED 1999");
+        carService.getAllCars(carService.getCarsProducedBefore1999());
+        System.out.println("AUTA NAJ");
+        carService.getAllCars(new ArrayList<>(Arrays.asList(carService.getMostExpensiveCar())));
+        carService.getAllCars(new ArrayList<>(Arrays.asList(carService.getCheapestCar())));
     }
 
 
