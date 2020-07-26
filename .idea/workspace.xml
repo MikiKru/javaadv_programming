@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78ecb8fd-7028-4a82-a9d6-aaf66013547c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/z12_z13/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/z12_z13/CarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/z12_z13/EngineType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/z12_z13/Manufacturer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/z12_z13/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/z12_z13/CarService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,10 +41,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/z12_z13/CarService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="35" selection-start-line="35" selection-end-line="46" selection-end-column="5" />
+            <state relative-caret-position="443">
+              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2365#2366#0" expanded="true" />
+                <element signature="e#2387#2388#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -260,7 +258,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595756517171" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595757504845" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -363,12 +361,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595661549900</updated>
-      <workItem from="1595661562067" duration="27008000" />
+      <workItem from="1595661562067" duration="27991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27008000" />
+    <option name="totallyTimeSpent" value="27991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -389,7 +387,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3654391" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.05240793" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -636,10 +634,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/z12_z13/CarService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="35" selection-start-line="35" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="443">
+          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2365#2366#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
           </folding>
         </state>
       </provider>

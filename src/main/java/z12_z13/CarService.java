@@ -34,9 +34,11 @@ public class CarService {
     ));
     // metody
     public void getAllCars(){
-        cars.forEach(car -> System.out.printf("Marka: %-15s Model: %-10s Cena: %10.2f zł Rok: %-4d Producenci: %-80s " +
+        final int[] id = {1};
+        cars.forEach(car -> System.out.printf("Id: %-2d Marka: %-15s Model: %-10s Cena: %10.2f zł Rok: %-4d Producenci: %-80s " +
                         "Engine: %-5s\n",
-            car.getBrand(),car.getModel(), car.getPrice(), car.getYear(),
+                id[0]++,
+                car.getBrand(),car.getModel(), car.getPrice(), car.getYear(),
                 car.getManuracturers().stream()
                         .map(manufacturer -> String.format("Nazwa: %s Kraj: %s", // Stream<Manufacturer>
                                 manufacturer.getName(),
@@ -45,9 +47,23 @@ public class CarService {
                 car.getEngineType()
         ));
     }
-
+    public void removeCarByIndex(int index){
+        try {
+            cars.remove(index);
+        } catch (IndexOutOfBoundsException e){
+            System.out.println("Nie ma auta o zadnym indeksie");
+        }
+    }
+    public void addCar(Car car){
+        cars.add(car);
+    }
     public static void main(String[] args) {
         CarService carService = new CarService();
+        carService.removeCarByIndex(0);
+        carService.removeCarByIndex(6);
+        carService.addCar(new Car("Toyota", "RAV4", 200_000, 2020,
+                new ArrayList<>( Arrays.asList(new Manufacturer("Toyota", 2020, "JAP"))),
+                EngineType.V8));
         carService.getAllCars();
     }
 
