@@ -6,21 +6,15 @@ import java.util.stream.Collectors;
 public class RandomOperations {
     List<Integer> arr = new ArrayList<>();
     public RandomOperations() {
-        for (int i = 0; i < 10; i++) {
-            arr.add(new Random().nextInt(11));
+        for (int i = 0; i < 10; i++) {      // 10 wartości losowych
+            arr.add(new Random().nextInt(11));  // wartości losowe od 0 do 10
         }
     }
-    public List<Integer> getUniqueElements(){
-        List<Integer> uniqueElems = new ArrayList<>();
-        for(Integer v : arr){
-            if(!uniqueElems.contains(v)){
-                uniqueElems.add(v);
-            }
-        }
-        return uniqueElems;
+    public Set<Integer> getUniqueElements(){
+        return new HashSet<>(arr);      // zbiór usuwa duplikaty
     }
     public Set<Integer> getNonNuiqueElements(){
-        List<Integer> nonuniqueElems = new ArrayList<Integer>();
+        Set<Integer> nonuniqueElems = new HashSet<>();
         Map<Integer, Integer> noNonUniqueElements = new HashMap<>();
         for(Integer v1 : arr){
             int count = 0;
@@ -35,7 +29,7 @@ public class RandomOperations {
             }
         }
         System.out.println(noNonUniqueElements);
-        return new HashSet<Integer>(nonuniqueElems);
+        return nonuniqueElems;
     }
 
     public static void main(String[] args) {
