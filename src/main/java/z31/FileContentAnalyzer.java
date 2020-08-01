@@ -2,6 +2,8 @@ package z31;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
@@ -35,12 +37,24 @@ public class FileContentAnalyzer {
                 wordsCounter.put(word, wordsCounter.get(word) + 1); // gdy zliczamy kolejne wystąpienie słowa
             }
         }
+        System.out.println(wordsCounter);
+        System.out.println(fileContent);
         return wordsCounter.keySet().stream()
                 .map(word -> String.format("| %15s | %3d |", word, wordsCounter.get(word)))
                 .collect(Collectors.joining("\n"));
     }
     public void writeResultsToFile(){
-
+        try {
+            FileWriter fw = new FileWriter(new File(pathResults));
+            fw.write(analyzeFileContent());
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
+    public static void main(String[] args) {
+        FileContentAnalyzer fca = new FileContentAnalyzer();
+        fca.getFileContent();
+        fca.writeResultsToFile();
+    }
 }
