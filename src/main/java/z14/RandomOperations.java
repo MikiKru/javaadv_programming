@@ -38,6 +38,5 @@ public class RandomOperations {
         System.out.println();
         System.out.println(ro.getUniqueElements());
         System.out.println(ro.getNonNuiqueElements());
-
     }
 }
